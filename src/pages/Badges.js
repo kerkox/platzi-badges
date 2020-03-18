@@ -17,6 +17,7 @@ class Badges extends React.Component {
     error:null,
     data: undefined,
   }
+  intervalId = 0;
 
   constructor(props) {
     super(props);
@@ -42,19 +43,19 @@ class Badges extends React.Component {
 
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('5. componentDidUpdate()');
-    console.log({
-      prevProps: prevProps,
-      prevState: prevState
-    })
-    console.log({
-      props:this.props,
-      state: this.state
-    })
+    // console.log('5. componentDidUpdate()');
+    // console.log({
+    //   prevProps: prevProps,
+    //   prevState: prevState
+    // })
+    // console.log({
+    //   props:this.props,
+    //   state: this.state
+    // })
   }
 
   componentWillUnmount() {
-    console.log('6. componentWillUnmount()')
+    // console.log('6. componentWillUnmount()')
     clearInterval(this.intervalId);
   }
 
@@ -68,7 +69,7 @@ class Badges extends React.Component {
        <PageError error={this.state.error}/>
       )
     }
-    console.log('2/4. render()');
+    // console.log('2/4. render()');
     return (
       <React.Fragment>
         <div className="Badges">
